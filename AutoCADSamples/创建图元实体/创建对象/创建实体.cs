@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Samples
 {
-    public class 创建实体
+    public class CreateEntity
     {
         [CommandMethod("AddPolyline")]
         public void Polyline_多段线()
@@ -93,6 +93,26 @@ namespace Samples
                 tr.Commit();
             }
         }
+        [CommandMethod("AddArc")]
+        public void Arc_圆弧()
+        {
+            Database db = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Database;
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
+                BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite) as BlockTableRecord;
+
+                Arc arc = new Arc();
+                arc.Center = new Point3d(0, 0, 0);
+                arc.StartAngle = 0;
+                arc.EndAngle = Math.PI;
+                arc.Radius = 10;
+                btr.AppendEntity(arc);
+                tr.AddNewlyCreatedDBObject(arc, true);
+                tr.Commit();
+            }
+        }
+
         [CommandMethod("AddXline")]
         public void Xline_构造线()
         {
@@ -112,6 +132,22 @@ namespace Samples
             }
         }
 
+        [CommandMethod("AddSpline")]
+        public void Spline_构造线()
+        {
+            Database db = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Database;
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
+                BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite) as BlockTableRecord;
+
+                //Spline spline = new Spline();
+
+                //btr.AppendEntity(xline);
+                //tr.AddNewlyCreatedDBObject(xline, true);
+                //tr.Commit();
+            }
+        }
         [CommandMethod("AddEllipse")]
         public void Ellipse_椭圆()
         {
