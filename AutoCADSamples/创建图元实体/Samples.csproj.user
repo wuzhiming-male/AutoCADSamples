@@ -3,6 +3,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files\Autodesk\AutoCAD 2012 - Simplified Chinese\acad.exe</StartProgram>
-    <StartArguments>/b "E:\work_CD\Mine\cad二次开发\AutoCADSamples\创建图元实体\start.scr"</StartArguments>
+    <StartArguments>/b "E:\work_CD\Mine\Git\AutoCADSamples\AutoCADSamples\创建图元实体\start.scr"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
