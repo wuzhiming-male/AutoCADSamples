@@ -73,7 +73,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="动态绘制\DrawJigDemo.cs" />
     <Compile Include="动态绘制\EntityJigDemo.cs" />
-    <Compile Include="实体锁定.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
