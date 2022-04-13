@@ -106,6 +106,7 @@ namespace Samples.动态绘制
         [CommandMethod("tsDrawJig")]
         public static void tsDrawJig()
         {
+            //需要打开硬件加速器才有完整的效果
             DrawJigDemo.Jig();
         }
     }
