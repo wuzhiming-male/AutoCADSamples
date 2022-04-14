@@ -204,7 +204,9 @@ namespace Samples
                     return;
 
                 Entity ent = tr.GetObject(per.ObjectId, OpenMode.ForWrite) as Entity;
-                ed.WriteMessage($"\n{ent.GetType().Name}");
+                ed.WriteMessage($"\nTypeName:{ent.GetType().Name}");
+                ed.WriteMessage($"\nRXClassName:{ent.GetRXClass().Name}");
+                ed.WriteMessage($"\nDxfName:{ent.GetRXClass().DxfName}");
             }
         }
     }
