@@ -75,6 +75,7 @@
     <Compile Include="动态绘制\EntityJigDemo.cs" />
     <Compile Include="实体选择\Selection.cs" />
     <Compile Include="扩展属性\XData.cs" />
+    <Compile Include="绘图次序\DrawOrder.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

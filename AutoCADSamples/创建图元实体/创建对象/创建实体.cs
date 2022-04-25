@@ -209,5 +209,6 @@ namespace Samples
                 ed.WriteMessage($"\nDxfName:{ent.GetRXClass().DxfName}");
             }
         }
+
     }
 }
